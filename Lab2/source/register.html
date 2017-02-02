@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>registerpg</title>
+
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+	
+  </head>
+  <body>
+  <h1> </h1>
+  <div class="container">
+
+	  <div class="row">
+		  <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+			  <form role="form">
+				  <h2 class="text-center">Sign Up</h2>
+				  <div class="row">
+					  <div class="col-xs-12 col-sm-6 col-md-6">
+						  <div class="form-group">
+							  <input type="text" name="first_name" id="username" class="form-control input-lg" placeholder="First Name" tabindex="1">
+						  </div>
+					  </div>
+					  <div class="col-xs-12 col-sm-6 col-md-6">
+						  <div class="form-group">
+							  <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+						  </div>
+					  </div>
+				  </div>
+				  <div class="form-group">
+					  <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Mobile No." tabindex="3">
+				  </div>
+				  <div class="form-group">
+					  <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+				  </div>
+				  <div class="row">
+					  <div class="col-xs-12 col-sm-6 col-md-6">
+						  <div class="form-group">
+							  <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+						  </div>
+					  </div>
+					  <div class="col-xs-12 col-sm-6 col-md-6">
+						  <div class="form-group">
+							  <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+						  </div>
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-xs-4 col-sm-3 col-md-3">
+
+					  </div>
+
+				  </div>
+				  <div class="row">
+					<div class="col-xs-12 col-md-6">
+
+						  <a href="loginex.html">Register</a>
+						  </div>
+						  <input type="submit" value= "Register" onclick= "store()">
+
+				  </div>
+			  </form>
+		  </div>
+	  </div>
+	  <!-- Modal -->
+	  <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				  <div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					  <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+				  </div>
+				  <div class="modal-body">
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+				  </div>
+
+			  </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    // storing input from register-form
+    function store() {
+        localStorage.setItem('username', username.value);
+        localStorage.setItem('password', password.value);
+        self.location="loginex.html";
+    }
+</script>
+  </body>
+</html>
