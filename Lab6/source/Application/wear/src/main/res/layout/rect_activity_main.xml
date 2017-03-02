@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.bkani.application.MainActivity"
+    tools:deviceIds="wear_square"
+    android:background="@drawable/image">
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint=" Enter text to classify "
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:id="@+id/edit1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0.04"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:text="Classify"
+        android:onClick="translateText"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/edit1"
+        android:layout_alignStart="@+id/edit1"
+        android:textSize="10sp" />
+
+    <TextView
+
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/first"
+        android:layout_weight="0.07"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/second"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/first"
+        android:layout_weight="0.08"
+        android:textColor="@color/black" />
+
+</LinearLayout>
