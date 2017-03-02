@@ -17,3 +17,6 @@ Wiki Link:  https://github.com/MonicaNadakuditi/ASE_Assignments/wiki/Lab-assignm
 
 LAB 5
 Wiki Link:   https://github.com/MonicaNadakuditi/ASE_Assignments/wiki/Lab-Assignment
+
+LAB 6
+Wiki Link:  https://github.com/MonicaNadakuditi/ASE_Assignments/wiki/Lab-Assignment-6
