@@ -9,7 +9,7 @@ var ObjectId = require('mongodb').ObjectID;
 var cors = require('cors');
 var app = express();
 var result={'body': []};
-var url = 'mongodb://alekhya:mongo123@ds161495.mlab.com:61495/apasedb';
+var url = 'mongodb://monica:monica@ds157390.mlab.com:57390/asedemo';
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +22,7 @@ app.post('/register', function (req, res) {
             res.write("Successfully Registered");
             res.end();       });    });
     var insertDocument = function(db, data, callback) {
-        db.collection('ase').insertOne( data, function(err, result) {
+        db.collection('usersList').insertOne( data, function(err, result) {
             if(err)           {
                 res.write("Registration Failed");
                 res.end();           }
@@ -35,7 +35,7 @@ app.post('/get-data',function (req,res) {
         findUser(db, function() {
             db.close();        });    });
     var findUser = function(db, callback) {
-        var cursor =db.collection('ase').find();
+        var cursor =db.collection('usersList').find();
         cursor.toArray(function(err, doc) {
             assert.equal(err, null);
                 j=doc;
@@ -58,7 +58,7 @@ app.post('/update',function (req,res) {
     var id=req.body.id2;
     var item={fname:req.body.fn,lname:req.body.ln,email:req.body.ml};
     var updateDocument = function(db, data, callback) {
-        db.collection('ase').updateOne({"_id":ObjectId(id)},{$set:item}, function(err, result) {
+        db.collection('usersList').updateOne({"_id":ObjectId(id)},{$set:item}, function(err, result) {
             if(err)            {
                 res.write("Registration Failed");
                 res.end();            }
@@ -70,7 +70,7 @@ app.post('/delete', function(req, res) {
         if(err)        {
             res.write("Registration Failed");
             res.end();        }
-        db.collection('ase').deleteOne({"_id": ObjectId(id)}, function(err, result) {
+        db.collection('usersList').deleteOne({"_id": ObjectId(id)}, function(err, result) {
             res.write("Successfully Deleted");
             res.end();
             console.log('Item deleted');        });});});

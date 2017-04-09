@@ -54,7 +54,6 @@ app.controller('MongoRestController',function($scope,$http){
         req.success(function(data, status, headers, config) {
 
             var col = [];
-            table.border="1";
             for (var i = 0; i < data.length; i++) {
                 for (var key in data[i]) {
                     if (col.indexOf(key) === -1) {
@@ -63,7 +62,7 @@ app.controller('MongoRestController',function($scope,$http){
                 }
             }
             var table = document.createElement("table");
-
+            table.border="2";
             var tr = table.insertRow(-1);
             for (var i = 0; i < col.length; i++) {
                 var th = document.createElement("th");
